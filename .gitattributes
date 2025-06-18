@@ -1,0 +1,11 @@
+# Define arquivos de código como texto com LF
+*.cs     text eol=lf
+*.csproj text eol=lf
+*.sln    text eol=lf
+*.md     text eol=lf
+
+# Força o Git a tratar arquivos binários corretamente
+*.png    binary
+*.jpg    binary
+*.onnx   binary
+*.zip    binary
