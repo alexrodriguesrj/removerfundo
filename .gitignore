@@ -1,0 +1,27 @@
+# Build e dependências
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos do Visual Studio
+.vscode/
+.vs/
+*.csproj.user
+
+# Modelos grandes (mantido fora do repositório)
+**/u2net.onnx
+
+# Logs e temporários
+*.log
+*.tmp
+*.cache
+*.DS_Store
+Thumbs.db
+
+# Arquivos gerados por nuget
+packages/
+project.lock.json
+project.fragment.lock.json
