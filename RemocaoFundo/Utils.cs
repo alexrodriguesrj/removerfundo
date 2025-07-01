@@ -2,6 +2,7 @@ using OpenCvSharp;
 using System.Drawing;
 using System.Drawing.Imaging;
 using Microsoft.ML.OnnxRuntime.Tensors;
+using System.IO; // Adicionando a referência ao namespace System.IO para MemoryStream
 
 namespace RemocaoFundo
 {
@@ -27,6 +28,7 @@ namespace RemocaoFundo
 
         public static Bitmap MaskToBitmap(float[] output, int width, int height)
         {
+            
             var bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
 
             for (int y = 0; y < height; y++)

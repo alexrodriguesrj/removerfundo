@@ -1,7 +1,10 @@
 using Microsoft.ML.OnnxRuntime;
 using Microsoft.ML.OnnxRuntime.Tensors;
 using OpenCvSharp;
+using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 
 namespace RemocaoFundo
 {
@@ -19,7 +22,7 @@ namespace RemocaoFundo
             using var ms = new MemoryStream(imagemBytes);
             using var original = new Bitmap(ms);
 
-            var resized = new Bitmap(original, new Size(320, 320));
+            var resized = new Bitmap(original, new System.Drawing.Size(320, 320));
             var inputTensor = Utils.ImageToTensor(resized);
 
             var inputs = new List<NamedOnnxValue>
